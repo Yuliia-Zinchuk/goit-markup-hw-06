@@ -784,10 +784,6 @@ address {
 
 /* -------------- REQUEST FORM ------------------ */
 
-textarea {
-  resize: none;
-}
-
 .request-title {
   position: absolute;
   top: 40px;
@@ -810,8 +806,8 @@ textarea {
 .form-field {
   outline: 1px solid blue;
   margin-bottom: 10px;
-  flex-direction: column;
   display: flex;
+  flex-direction: column;
 }
 
 .form-label {
@@ -828,14 +824,22 @@ textarea {
   margin: 0;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  padding: 12px 16px; /* это было взято из комментария. в других полях другие*/
+  padding: 11px 12px; /* это было взято из макета */
 }
 
-.form-input::placeholder {
+/*   исправить надо */
+.form-input-textarea {
+  resize: none;
+  padding: 12px 16px;
+}
+
+.form-input-textarea::placeholder {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
+
+  /* padding: 12px 16px; */
 
   color: rgba(117, 117, 117, 0.5);
 }
@@ -855,6 +859,7 @@ textarea {
   color: rgba(255, 255, 255, 0.6);
 }
 
+/* ---------- FOOTERS FORM ------------- */
 .subscription-input {
   background-color: transparent;
 
@@ -886,16 +891,43 @@ textarea {
   letter-spacing: 0.06em;
 
   color: var(--white-color);
+
+  /* text-align: left;
+  padding-left: 29; */
 }
+
+/* .btn-send {
+  position: relative;
+  content: '';
+   left: 29px; 
+} */
+
+/* .footer-icon-send {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  /* transform: translate(50%, -50%); */
+
+/* display: flex; */
+/* margin-left: 10px; */
 
 .btn-send {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
-.form-input-textarea {
-}
-
+/* .form-input-textarea {
+} */
 .form-label-checkbox {
   font-size: 14px;
   line-height: 1.71;
   color: var(--primary-text-color);
+}
+
+.form-checkbox {
+  width: 15px;
+  height: 16px;
 }
