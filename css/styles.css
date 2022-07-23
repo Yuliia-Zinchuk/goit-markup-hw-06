@@ -793,6 +793,7 @@ address {
   top: 40px;
   left: 40px;
   right: 40px;
+  margin-bottom: 12px;
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
@@ -801,29 +802,25 @@ address {
 
 .form {
   width: 448px;
-  /* outline: 1px solid tomato; */
   margin: 75px 40px 164px;
-  /* right: 40px;
-  left: 40px; */
 }
 
 .form-field {
-  /* outline: 1px solid blue; */
-  /* margin-bottom: 10px; */
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+
+  letter-spacing: 0.01em;
+
+  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
 
   position: relative;
-
-  margin-bottom: 10px;
-}
-
-.form-label {
-  /* position: absolute; */
 }
 
 .form-input {
-  /* margin: 0; */
+  margin-top: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   height: 40px;
@@ -836,30 +833,29 @@ address {
 
 .input-icon-person {
   position: absolute;
-  /* display: inline-block; */
-  top: 54%;
+  top: 50%;
   left: 12px;
 
   width: 100px;
   height: 100px;
 
   transition: transform var(--anim);
-  /* padding-bottom: 0; */
-
-  /* transform: translateY(-50%); */
 }
 
 .form-input:focus + .input-icon-person {
   fill: #2196f3;
+  transition: transform var(--anim);
 }
 
 .form-input:focus {
   outline: 1px solid var(--accent-color);
   border: none;
+  transition: transform var(--anim);
 }
 
 .modal-btn:hover .modal-btn-icon {
   fill: #2196f3;
+  transition: transform var(--anim);
 }
 
 /* вариант передачи цвета иконке при фокусе */
@@ -867,10 +863,21 @@ address {
   fill: #2196f3;
 } */
 
-/*   исправить надо */
 .form-input-textarea {
-  resize: none;
+  width: 100%;
+  height: 120px;
   padding: 12px 16px;
+  margin-top: 4px;
+
+  background-color: transparent;
+  border: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  outline: transparent;
+  resize: none;
+
+  transition: border-color var(--anim);
 }
 
 .form-input-textarea::placeholder {
@@ -879,15 +886,8 @@ address {
   line-height: 1.17;
   letter-spacing: 0.01em;
 
-  /* padding: 12px 16px; */
-
   color: rgba(117, 117, 117, 0.5);
 }
-/* это я пыталась оформить для текстерии наверное */
-
-/* .form-custom-checkbox {
-  display: inline;
-} */
 
 .form-label-checkbox {
   font-size: 14px;
@@ -897,6 +897,7 @@ address {
   display: flex;
   align-items: center;
   gap: 7px;
+  margin-top: 20px;
 }
 
 .form-custom-checkbox {
@@ -918,9 +919,10 @@ address {
 
 .form-checkbox:checked ~ .form-custom-checkbox {
   border: none;
+  background-color: var(--accent-color);
+
   /* border-color: transparent; */
   /* outline: transparent; */
-  background-color: var(--accent-color);
   /* background-size: contain;
   background-origin: border-box; */
   /* opacity: 1; */
@@ -928,19 +930,16 @@ address {
 
 .form-checkbox-link {
   color: var(--accent-color);
-  /* text-decoration: underline; */
+  text-underline-position: under;
 }
 
 .subscription-input::placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
-
-  padding-left: 16px;
-
-  /* display: flex;
-  align-items: center; */
   letter-spacing: 0.03em;
+
+  /* padding-left: 16px; */
 
   color: rgba(255, 255, 255, 0.6);
 }
@@ -956,7 +955,13 @@ address {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
 
-  box-sizing: border-box;
+  padding-left: 16px;
+}
+
+.subscription {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
 }
 
 .btn-form {
@@ -971,34 +976,15 @@ address {
   font-size: 16px;
   line-height: 1.88;
 
-  /* display: flex;
-  align-items: center;
-  text-align: center; */
   letter-spacing: 0.06em;
 
   color: var(--white-color);
+}
 
-  /* text-align: left;
-  padding-left: 29; */
+.btn-form-modal {
   display: block;
   margin: 30px auto;
 }
-
-/* .btn-send {
-  position: relative;
-  content: '';
-   left: 29px; 
-} */
-
-/* .footer-icon-send {
-  position: absolute;
-  content: '';
-  top: 0;
-  right: 0;
-  /* transform: translate(50%, -50%); */
-
-/* display: flex; */
-/* margin-left: 10px; */
 
 .btn-send {
   display: flex;
@@ -1006,6 +992,3 @@ address {
   justify-content: center;
   gap: 10px;
 }
-
-/* .form-input-textarea {
-} */
